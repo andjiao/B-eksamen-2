@@ -1,4 +1,4 @@
 package eksamen.backendeksamen.dto;
 
-public class Request {
+public class TeamRequest {
 }

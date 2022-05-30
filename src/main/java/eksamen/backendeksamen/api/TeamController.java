@@ -1,4 +1,4 @@
 package eksamen.backendeksamen.api;
 
-public class Controller {
+public class TeamController {
 }
