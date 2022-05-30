@@ -55,10 +55,11 @@ public class RiderService {
         teamRepository.save(t);
 
         Rider r = riderRepository.findById(riderId).orElseThrow();
-        r.setRiderName(r.getRiderName());
+       r.setRiderName(r.getRiderName());
         r.setTeam(t);
         return new RiderResponse((riderRepository.save(r)));
     }
+
 
     public void updateTeam(int riderId, Team newTeam){
         Rider rider = riderRepository.findById(riderId).orElseThrow();
