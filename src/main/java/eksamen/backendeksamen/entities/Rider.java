@@ -30,8 +30,8 @@ public class Rider {
     @ManyToOne(cascade = CascadeType.PERSIST)
     private Team team;
 
-    public Rider (String ridername){
-        this.riderName=ridername;
+    public Rider (String riderName){
+        this.riderName=riderName;
     }
 
     public Rider(String riderName, Team team){
@@ -40,7 +40,7 @@ public class Rider {
     }
 
     public Rider (RiderRequest riderRequest){
-        this.riderName= riderRequest.getRidername();
+        this.riderName= riderRequest.getRiderName();
     }
 
 }

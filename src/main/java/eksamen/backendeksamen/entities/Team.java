@@ -19,7 +19,6 @@ public class Team {
 
     String teamName;
     int numbMembers;
-    int wins;
 
     @OneToMany(mappedBy = "team", cascade = CascadeType.PERSIST)
     private Set<Rider> riders = new HashSet<>();
@@ -37,8 +36,9 @@ public class Team {
         }
     }
 
-    public Team(String teamName) {
+    public Team(String teamName, int numbMembers) {
         this.teamName = teamName;
+        this.numbMembers=numbMembers;
     }
 
     /*

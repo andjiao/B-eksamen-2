@@ -25,10 +25,10 @@ public class TestData implements ApplicationRunner {
     }
 
     public void makeTestData() {
-        Team t1 = new Team("FDJ");
-        Team t2 = new Team("Cofidis");
-        Team t3 = new Team("Team DSM");
-        Team t4 = new Team("Jumbo-Visma");
+        Team t1 = new Team("FDJ",28);
+        Team t2 = new Team("Cofidis",33);
+        Team t3 = new Team("Team DSM",29);
+        Team t4 = new Team("Jumbo-Visma",30);
 
         Rider r1 = new Rider("Albert");
         Rider r2 = new Rider("Bo");

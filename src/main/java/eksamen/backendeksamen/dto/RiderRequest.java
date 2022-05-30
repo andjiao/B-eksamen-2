@@ -13,7 +13,7 @@ import java.time.format.DateTimeFormatter;
 @AllArgsConstructor
 public class RiderRequest {
 
-    String Ridername;
+    String riderName;
     String teamName;
 
 }

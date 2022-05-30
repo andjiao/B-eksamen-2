@@ -12,9 +12,9 @@ import java.util.stream.Collectors;
 @Setter
 @AllArgsConstructor
 public class RiderResponse {
-    int id;
-     String riderName;
-     String teamName;
+    private int id;
+     private String riderName;
+     private String teamName;
 
      public RiderResponse (Rider rider){
          this.id = rider.getId();

@@ -42,11 +42,12 @@ public class RiderService {
        Team t = teamRepository.findTeamByTeamName(rr.getTeamName());
        teamRepository.save(t);
 
-       Rider newR = new Rider(rr.getRidername(),t);
+
+       Rider newR = new Rider(rr.getRiderName(),t);
        riderRepository.save(newR);
 
-       //RiderResponse riderResponse = new RiderResponse(newR);
-       return new RiderResponse(newR) ;
+       RiderResponse riderResponse = new RiderResponse(newR);
+       return  riderResponse;
     }
 
     public RiderResponse editRider(RiderRequest radUpdate, int riderId){
