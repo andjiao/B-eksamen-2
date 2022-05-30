@@ -43,7 +43,7 @@ public class RiderService {
        teamRepository.save(t);
 
 
-       Rider newR = new Rider(rr.getRiderName(),t);
+       Rider newR = new Rider(rr.getRiderName(),t, rr.getTime());
        riderRepository.save(newR);
 
        RiderResponse riderResponse = new RiderResponse(newR);
@@ -55,7 +55,8 @@ public class RiderService {
         teamRepository.save(t);
 
         Rider r = riderRepository.findById(riderId).orElseThrow();
-       r.setRiderName(r.getRiderName());
+       r.setRiderName(radUpdate.getRiderName());
+       r.setTime(radUpdate.getTime());
         r.setTeam(t);
         return new RiderResponse((riderRepository.save(r)));
     }

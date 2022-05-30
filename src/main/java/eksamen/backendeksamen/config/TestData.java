@@ -30,14 +30,14 @@ public class TestData implements ApplicationRunner {
         Team t3 = new Team("Team DSM",29);
         Team t4 = new Team("Jumbo-Visma",30);
 
-        Rider r1 = new Rider("Albert");
-        Rider r2 = new Rider("Bo");
-        Rider r3 = new Rider("Carl");
-        Rider r4 = new Rider("David");
-        Rider r5 = new Rider("Elvis");
-        Rider r6 = new Rider("Frederik");
-        Rider r7 = new Rider("Gert");
-        Rider r8 = new Rider("Hans");
+        Rider r1 = new Rider("Albert",30);
+        Rider r2 = new Rider("Bo",20);
+        Rider r3 = new Rider("Carl",43);
+        Rider r4 = new Rider("David",46);
+        Rider r5 = new Rider("Elvis",56);
+        Rider r6 = new Rider("Frederik",80);
+        Rider r7 = new Rider("Gert",90);
+        Rider r8 = new Rider("Hans",101);
 
 
         t1.addRiders(Set.of(r1,r2,r3));

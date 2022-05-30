@@ -17,30 +17,26 @@ public class Rider {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     int id;
     String riderName;
-    //int age;
-    //String nation;
-    //int time;
-
-    //Mountain point
-    //int mPoint;
-
-    //Spring point
-    //int sPoint;
+    int time;
 
     @ManyToOne(cascade = CascadeType.PERSIST)
     private Team team;
 
-    public Rider (String riderName){
+    public Rider (String riderName,int time){
+
         this.riderName=riderName;
+        this.time=time;
     }
 
-    public Rider(String riderName, Team team){
+    public Rider(String riderName, Team team, int time){
         this.riderName=riderName;
         this.team=team;
+        this.time=time;
     }
 
     public Rider (RiderRequest riderRequest){
         this.riderName= riderRequest.getRiderName();
+        this.time=riderRequest.getTime();
     }
 
 }

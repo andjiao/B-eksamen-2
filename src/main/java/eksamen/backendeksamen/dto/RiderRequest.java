@@ -15,5 +15,6 @@ public class RiderRequest {
 
     String riderName;
     String teamName;
+    int time;
 
 }
