@@ -71,9 +71,4 @@ public void deleteRider(int riderId){
         riderRepository.deleteById(riderId);
 }
 
-
-
-    /*
-
-     */
 }

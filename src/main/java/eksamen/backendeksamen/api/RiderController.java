@@ -47,6 +47,4 @@ public class RiderController {
     public void deleteRider(@PathVariable int id){
     }
 
-    /*
-    */
 }
