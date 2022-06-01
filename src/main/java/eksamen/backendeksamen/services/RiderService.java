@@ -62,9 +62,10 @@ public class RiderService {
     }
 
 
-    public void updateTeam(int riderId, Team newTeam){
+    public void updateTeam(int riderId, String newTeam){
         Rider rider = riderRepository.findById(riderId).orElseThrow();
-        rider.setTeam(newTeam);
+        Team team = teamRepository.findTeamByTeamName(newTeam);
+        rider.setTeam(team);
         riderRepository.save(rider);
     }
 public void deleteRider(int riderId){

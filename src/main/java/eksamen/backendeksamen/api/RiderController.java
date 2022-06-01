@@ -40,11 +40,14 @@ public class RiderController {
     }
 
     @PatchMapping("/{id}/{newTeam}")
-    public void editTeam(@PathVariable int id, @PathVariable Team newTeam) throws Exception{
+    public String editTeam(@PathVariable int id, @PathVariable String newTeam) throws Exception{
         riderService.updateTeam(id, newTeam);
+        return "{\"message\":\"Succes\"}";
     }
     @DeleteMapping("/{id}")
-    public void deleteRider(@PathVariable int id){
+    public String deleteRider(@PathVariable int id){
+        riderService.deleteRider(id);
+        return "{\"message\":\"Succes\"}";
     }
 
 }
