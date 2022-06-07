@@ -11,7 +11,7 @@ import org.springframework.stereotype.Component;
 
 import java.util.List;
 import java.util.Set;
-@Component //TODO mangler denne
+@Component
 @Profile("!test")
 public class TestData implements ApplicationRunner {
 

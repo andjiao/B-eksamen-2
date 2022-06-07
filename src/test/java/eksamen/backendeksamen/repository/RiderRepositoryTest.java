@@ -20,7 +20,7 @@ class RiderRepositoryTest {
     @Autowired
     RiderRepository riderRepository;
 
-    @BeforeEach//TODO maangler denne
+    @BeforeEach
     void setUp() {
 
         teamRepository.deleteAll();
