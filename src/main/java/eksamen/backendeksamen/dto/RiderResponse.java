@@ -5,6 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.time.LocalTime;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -26,6 +27,15 @@ public class RiderResponse {
 
      public static List<RiderResponse> getRidersFromEntities(List<Rider> riders) {
          return riders.stream().map(rider -> new RiderResponse(rider)).collect(Collectors.toList());
+
      }
+
+      /*public static List<RiderResponse> getRidersFromEntities(List<Rider> riders) {
+     List<RiderResponse> responses = new ArrayList<>();
+     for(Rider rider: riders){
+         RiderResponse rr = new RiderResponse(rider);
+         responses.add(rr);
+     }*/
+
     }
 

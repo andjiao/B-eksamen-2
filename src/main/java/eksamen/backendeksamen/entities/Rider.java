@@ -6,7 +6,6 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
-import java.text.DateFormat;
 
 @Entity
 @Getter
@@ -19,14 +18,19 @@ public class Rider {
     int id;
     String riderName;
     int time;
-    //Time time
-    //DateFormat birthday;
+
+    /*
+    time%60 = restSekunder
+    time/60 = minutter
+    minutter/24 = timer
+    minutter%24
+    * */
 
 
     @ManyToOne(cascade = CascadeType.PERSIST)
     private Team team;
 
-    public Rider (String riderName,int time){
+    public Rider (String riderName, int time){
 
         this.riderName=riderName;
         this.time=time;
