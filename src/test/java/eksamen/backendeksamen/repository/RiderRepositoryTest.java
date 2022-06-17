@@ -24,7 +24,7 @@ class RiderRepositoryTest {
     void setUp() {
 
         teamRepository.deleteAll();
-        riderRepository.deleteAll();;
+        riderRepository.deleteAll();
 
         Team t4 = new Team("Jumbo-Visma",30);
 
@@ -52,9 +52,9 @@ class RiderRepositoryTest {
         assertEquals(4,riderList.size());
     }
 
-    @Test
+    /*@Test
     public void getRiderFromTeamNotOk(){
         List<Rider> riderList = riderRepository.findRiderByTeam_TeamName("nisse");
         assertEquals(0,riderList.size());
-    }
+    }*/
 }

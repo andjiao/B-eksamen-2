@@ -40,7 +40,7 @@ public class RiderService {
 
     public RiderResponse createRider(RiderRequest rr){
        Team t = teamRepository.findTeamByTeamName(rr.getTeamName());
-       teamRepository.save(t);
+       //teamRepository.save(t);
 
 
        Rider newR = new Rider(rr.getRiderName(),t, rr.getTime());

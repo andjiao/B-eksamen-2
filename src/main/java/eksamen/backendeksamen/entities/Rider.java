@@ -16,16 +16,9 @@ public class Rider {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     int id;
+
     String riderName;
     int time;
-
-    /*
-    time%60 = restSekunder
-    time/60 = minutter
-    minutter/24 = timer
-    minutter%24
-    * */
-
 
     @ManyToOne(cascade = CascadeType.PERSIST)
     private Team team;
@@ -48,3 +41,12 @@ public class Rider {
     }
 
 }
+
+
+
+   /*
+    time%60 = restSekunder
+    time/60 = minutter
+    minutter/24 = timer
+    minutter%24
+    * */

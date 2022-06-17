@@ -23,7 +23,6 @@ public class Team {
     @OneToMany(mappedBy = "team", cascade = CascadeType.PERSIST)
     private Set<Rider> riders = new HashSet<>();
 
-
     public void addRider(Rider rider) {
         this.riders.add(rider);
         rider.setTeam(this);
