@@ -13,7 +13,7 @@ import java.util.List;
 @RestController
 /* denne påvirker kun i broser, så man kan stadig kører controller i postman*/
 @CrossOrigin
-@RequestMapping("/api/riders")
+@RequestMapping("riders")
 public class RiderController {
 
     @Autowired
